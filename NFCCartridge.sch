@@ -1,17 +1,22 @@
-EESchema Schematic File Version 4
-EELAYER 29 0
+EESchema Schematic File Version 5
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Supercon 2019 Badge Cartridge Template"
+Title "NFC Cartridge for Supercon 2019 Badge"
 Date ""
 Rev ""
-Comp "Template designed by: @thomasflummer"
+Comp "Designed by: @thomasflummer"
 Comment1 "License: CC-BY-SA"
 Comment2 ""
 Comment3 ""
 Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
 $EndDescr
 $Comp
 L Connector:Conn_01x40_Male J1
@@ -222,4 +227,184 @@ Wire Wire Line
 	2000 1150 2000 1200
 Wire Wire Line
 	2000 1500 2000 1550
+$Comp
+L SuperconCartridge:ST25DVxxx U2
+U 1 1 5DB74DA0
+P 4000 3150
+F 0 "U2" H 4000 3200 50  0000 C CNN
+F 1 "ST25DVxxx" H 4000 3100 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4000 3150 50  0001 C CNN
+F 3 "" H 4000 3150 50  0001 C CNN
+	1    4000 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2900 3450 2900
+Wire Wire Line
+	3450 2900 3450 3000
+Wire Wire Line
+	3450 3000 3600 3000
+$Comp
+L power:+3V3 #PWR09
+U 1 1 5DB7773E
+P 4000 2450
+F 0 "#PWR09" H 4000 2300 50  0001 C CNN
+F 1 "+3V3" H 4015 2623 50  0000 C CNN
+F 2 "" H 4000 2450 50  0001 C CNN
+F 3 "" H 4000 2450 50  0001 C CNN
+	1    4000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5DB77C8D
+P 4000 3850
+F 0 "#PWR013" H 4000 3600 50  0001 C CNN
+F 1 "GND" V 4005 3722 50  0000 R CNN
+F 2 "" H 4000 3850 50  0001 C CNN
+F 3 "" H 4000 3850 50  0001 C CNN
+	1    4000 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2550 4000 2450
+Wire Wire Line
+	4000 3850 4000 3750
+$Comp
+L device:R R1
+U 1 1 5DB77FAC
+P 4750 3150
+F 0 "R1" H 4820 3196 50  0000 L CNN
+F 1 "4.7k" H 4820 3105 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4680 3150 50  0001 C CNN
+F 3 "~" H 4750 3150 50  0001 C CNN
+	1    4750 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR010
+U 1 1 5DB79035
+P 4750 2900
+F 0 "#PWR010" H 4750 2750 50  0001 C CNN
+F 1 "+3V3" H 4765 3073 50  0000 C CNN
+F 2 "" H 4750 2900 50  0001 C CNN
+F 3 "" H 4750 2900 50  0001 C CNN
+	1    4750 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 2850 3300 0    50   Input ~ 0
+GENIO1
+Text GLabel 2850 3400 0    50   Input ~ 0
+GENIO2
+Text GLabel 4900 3400 2    50   Input ~ 0
+GENIO3
+Wire Wire Line
+	4750 2900 4750 3000
+Wire Wire Line
+	4900 3400 4750 3400
+Wire Wire Line
+	4750 3300 4750 3400
+Connection ~ 4750 3400
+Wire Wire Line
+	4750 3400 4400 3400
+NoConn ~ 4400 2900
+Wire Wire Line
+	2150 2900 2150 2950
+Wire Wire Line
+	2150 3250 2150 3300
+$Comp
+L device:C C2
+U 1 1 5DB79968
+P 2150 3100
+F 0 "C2" H 2265 3146 50  0000 L CNN
+F 1 "100nF" H 2265 3055 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2188 2950 50  0001 C CNN
+F 3 "~" H 2150 3100 50  0001 C CNN
+	1    2150 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR011
+U 1 1 5DB79979
+P 2150 2900
+F 0 "#PWR011" H 2150 2750 50  0001 C CNN
+F 1 "+3V3" H 2165 3073 50  0000 C CNN
+F 2 "" H 2150 2900 50  0001 C CNN
+F 3 "" H 2150 2900 50  0001 C CNN
+	1    2150 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5DB79987
+P 2150 3300
+F 0 "#PWR012" H 2150 3050 50  0001 C CNN
+F 1 "GND" V 2155 3172 50  0000 R CNN
+F 2 "" H 2150 3300 50  0001 C CNN
+F 3 "" H 2150 3300 50  0001 C CNN
+	1    2150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R3
+U 1 1 5DB7E4DC
+P 3300 3100
+F 0 "R3" H 3370 3146 50  0000 L CNN
+F 1 "4.7k" H 3370 3055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3230 3100 50  0001 C CNN
+F 3 "~" H 3300 3100 50  0001 C CNN
+	1    3300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR015
+U 1 1 5DB7E4ED
+P 3300 2850
+F 0 "#PWR015" H 3300 2700 50  0001 C CNN
+F 1 "+3V3" H 3315 3023 50  0000 C CNN
+F 2 "" H 3300 2850 50  0001 C CNN
+F 3 "" H 3300 2850 50  0001 C CNN
+	1    3300 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2850 3300 2950
+Wire Wire Line
+	3000 2850 3000 2950
+$Comp
+L device:R R2
+U 1 1 5DB8132B
+P 3000 3100
+F 0 "R2" H 3070 3146 50  0000 L CNN
+F 1 "4.7k" H 3070 3055 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2930 3100 50  0001 C CNN
+F 3 "~" H 3000 3100 50  0001 C CNN
+	1    3000 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR014
+U 1 1 5DB8133C
+P 3000 2850
+F 0 "#PWR014" H 3000 2700 50  0001 C CNN
+F 1 "+3V3" H 3015 3023 50  0000 C CNN
+F 2 "" H 3000 2850 50  0001 C CNN
+F 3 "" H 3000 2850 50  0001 C CNN
+	1    3000 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3300 3000 3300
+Wire Wire Line
+	2850 3400 3300 3400
+Wire Wire Line
+	3300 3250 3300 3400
+Connection ~ 3300 3400
+Wire Wire Line
+	3300 3400 3600 3400
+Wire Wire Line
+	3000 3250 3000 3300
+Connection ~ 3000 3300
+Wire Wire Line
+	3000 3300 3600 3300
 $EndSCHEMATC

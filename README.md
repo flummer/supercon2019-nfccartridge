@@ -1,13 +1,10 @@
-# Unofficial KiCad template for a 2019 Hackaday Superconference Badge Cartridge
+# NFC Cardtridge for the 2019 Hackaday Superconference Badge
 
-![Cartridge template render](https://raw.githubusercontent.com/flummer/supercon2019-cartridgetemplate/master/IMAGES/front_back_render.png "Cartridge template render")
+![NFC Cartridge render](https://github.com/flummer/supercon2019-nfccartridge/raw/master/IMAGES/front_back_render.png "NFC Cartridge render")
 
-This template can be used as a starting point to make a cartridge for the Supercon badge, that will mate with the 40 pin expansion connector on the back of the badge.
+This is a cartridge that provides an NFC tag using an ST25DV. In addition to the RF interface, that can be used without plugging in the cartridge, the ST25DV also have an I2C interface, that is connected to the IO pins on the badge connector, allowing the badge to access the same memory in the NFC tag chip.
 
-| WARNING: This design is unofficial, and has NOT been tested |
-| --- |
-
-It's using an angled 2x20 pin male header, a w25q128 SPI flash and a 100nF cap. The schematic has the pins named using global nets, so it's easy to simply add in your own stuff.
+This cartridge is based on the [unofficial Superconference 2019 Badge Cartridge template](https://github.com/flummer/supercon2019-cartridgetemplate) and hence include the w25q128 SPI flash and a 100nF cap in addition to the 2x20 pin angled male pin header for the badge connection. The flash allows badge configurations and firmware specific to this cartridge to be loaded from the cartridge it self making it selfcontained.
 
 ## License
 
